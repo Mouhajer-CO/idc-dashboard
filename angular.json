@@ -17,6 +17,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "ng-apexcharts",
+              "apexcharts"
+            ],
             "outputPath": "dist/idc-dashboard",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -27,7 +31,9 @@
             "assets": [
               "src/assets"
             ],
-            "styles": [],
+            "styles": [
+              "src/assets/scss/style.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -86,11 +92,16 @@
             "assets": [
               "src/assets"
             ],
-            "styles": [],
+            "styles": [
+              "src/styles.scss"
+            ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
